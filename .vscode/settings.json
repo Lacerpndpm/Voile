@@ -1,0 +1,7 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "stdio.h": "c"
+    },
+      // 添加以下设置以配置 PowerShell 终端在启动时自动设置代码页为 UTF-8
+}
