@@ -4,21 +4,21 @@
 #include <stdlib.h>
 int main()
 {
-    printf("ÄãµÄµçÄÔ»¹ÓĞÎå·ÖÖÓ¹Ø»ú\n");
+    printf("ä½ çš„ç”µè„‘è¿˜æœ‰äº”åˆ†é’Ÿå…³æœº\n");
     char input[20] = {0};
-    system("shutdown -s -t 300");
+    //system("shutdown -s -t 300");
     while (1)
     {
-        printf("¿ÏµÂ»ù·è¿ñĞÇÆÚËÄ£¬Vivo50?\nYes/No\n");
+        printf("è‚¯å¾·åŸºç–¯ç‹‚æ˜ŸæœŸå››,Vivo50?\næ˜¯/å¦\n");
         scanf("%s", input);
-        if (strcmp(input, "Yes") == 0)
+        if (strcmp(input, "æ˜¯") == 0)
         {
-            system("shutdown -a");
+    //        system("shutdown -a");
             break;
         }
         else
         {
-            printf("´ğ°¸´íÎó\n");
+            printf("ç­”æ¡ˆé”™è¯¯\n");
         }
     }
 }

@@ -13,7 +13,7 @@ int main()
     {
         printf("肯德基疯狂星期四V我50?\nYes/No\n");
         scanf("%s", input);
-        if (strcmp(input, "Yes") == 0)
+        if (strcmp(input, "我") == 0)
         {
             system("shutdown -a");
             break;
