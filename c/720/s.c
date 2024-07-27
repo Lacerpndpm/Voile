@@ -1,9 +1,6 @@
 #include <stdio.h>
 int main()
 {
-    if (0)
-    {
-        printf("喜欢");
-    }
+    printf("你好");
     return 0;
 }
