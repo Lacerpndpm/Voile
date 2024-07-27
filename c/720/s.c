@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main()
 {
-    printf("你好");
+    printf("我c你**");
     return 0;
 }
