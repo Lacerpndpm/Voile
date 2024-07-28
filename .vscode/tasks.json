@@ -7,10 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-finput-charset=UTF-8",  // 添加这个选项来指定输入文件的字符
-            //    "${file}",
+                //    "${file}",
                 "${fileDirname}\\*.c",
-            "-o",
+                "-o",
                 "${fileDirname}\\test.exe"
             ],
             "options": {
