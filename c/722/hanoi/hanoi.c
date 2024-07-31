@@ -5,20 +5,20 @@ void h(int n, char from, char to, char temp)
     if (n == 1)
     {
         count++;
-        printf("step%d\nÒÆ¶¯ÅÌ1´Ó%cµ½%c\n", count, from, to);
+        printf("step%d\nç§»åŠ¨ç›˜1ä»Ž%cåˆ°%c\n", count, from, to);
     }
     else
     {
         h(n - 1, from, temp, to);
         count++;
-        printf("step%d\nÒÆ¶¯ÅÌ%d´Ó%cµ½%c\n", count, n, from, to);
+        printf("step%d\nç§»åŠ¨ç›˜%dä»Ž%cåˆ°%c\n", count, n, from, to);
         h(n - 1, temp, to, from);
     }
 }
 int main()
 {
     int n;
-    printf("Ò»¹²¼¸²ã:");
+    printf("ä¸€å…±å‡ å±‚:");
     scanf("%d", &n);
     h(n, 'A', 'C', 'B');
 }

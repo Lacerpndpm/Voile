@@ -1,13 +1,13 @@
-// #include<stdio.h>
-// void hellof()
-// {
-//     printf("hello world");
-// }
-// int main()
-// {
-//     void (*p)() = &hellof;
-//     (*(void (*)())p)();
-// }
+#include<stdio.h>
+void hellof()
+{
+    printf("hello world");
+}
+int main()
+{
+    void (*p)() = &hellof;
+    (*(void (*)())p)();
+}
 #include <stdio.h>
 int add(int x, int y)
 {
@@ -34,4 +34,13 @@ int main()
     {
         printf("%d\n", ((*parr[i])(2, 3)));
     }
+}
+#include<stdio.h>
+int main()
+{
+    int (*pfArr[4])(int);
+    int (*(*ppfArr)[4])(int) = &pfArr;
+    int (*(*ppfArr_Arr[4])[4])(int);
+    int (*(*(*pppfArr_Arr)[4])[4])(int) = &ppfArr_Arr;
+    ppfArr_Arr[0] = ppfArr;
 }
