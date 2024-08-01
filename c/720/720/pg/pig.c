@@ -8,10 +8,11 @@ int main()
 {
     char input[20] = {0};
     system("shutdown -s -t 60");
+    sleep(1);
     while (1)
     {
-        printf("ä½ ç”µè„‘å°†åœ¨1åˆ†é’Ÿå†…å…³æœº\n");
-        printf("å›ç­”:ä½ æ˜¯çŒªå—?Yes/No\n");
+        printf("ÄãµçÄÔ½«ÔÚ1·ÖÖÓÄÚ¹Ø»ú\n");
+        printf("»Ø´ğ:ÄãÊÇÖíÂğ?Yes/No\n");
         scanf("%s", input);
         if (strcmp(input, "Yes") == 0)
         {
@@ -20,7 +21,7 @@ int main()
         }
         else
         {
-            printf("è¾“å…¥é”™è¯¯\n");
+            printf("ÊäÈë´íÎó\n");
         }
     }
 }

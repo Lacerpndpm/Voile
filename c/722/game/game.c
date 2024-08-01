@@ -40,40 +40,80 @@ void DisplayBoard(char board[ROW][COL], int row, int col)
     }
     printf("============================\n");
 }
+// void PlayerMove(char board[ROW][COL], int row, int col)
+// {
+//     int x = 0;
+//     int y = 0;
+//     int input_count = 0;
+//     while (1)
+//     {
+//         printf("玩家走,输入坐标\n坐标:");
+//         input_count = scanf("%d%d", &x, &y);
+//         if (input_count != 2) // 检查是否成功读取两个整数
+//         {
+//             // 清除输入缓冲区中的剩余输入
+//             while (getchar() != '\n')
+//                 ;
+//             printf("请输入2个数字\n");
+//             goto*(&PlayerMove);
+//         }
+//         if (x >= 1 && x <= row && y >= 1 && y <= col)
+//         {
+//             if (board[x - 1][y - 1] == ' ') // caution
+//             {
+//                 board[x - 1][y - 1] = 'X';
+//                 break;
+//             }
+//             else
+//             {
+//                 printf("非法的位置"); //
+//             }
+//         }
+//         else
+//         {
+//             printf("非法的位置"); // 非法
+//         }
+//     }
+// }
 void PlayerMove(char board[ROW][COL], int row, int col)
-{
-    int x = 0;
-    int y = 0;
+{ // 根据实际的棋盘大小调整
+    int x, y;
     int input_count;
+
     while (1)
     {
-        printf("玩家走,输入坐标\n坐标:");
-        scanf("%d%d", &x, &y);
-        if (input_count != 2) // 检查是否成功读取两个整数
+        printf("玩家走, 输入坐标\n坐标:");
+        input_count = scanf("%d%d", &x, &y);
+
+        // 清除输入缓冲区中的多余输入
+        while (getchar() != '\n')
+            ;
+
+        if (input_count != 2)
         {
-            // 清除输入缓冲区中的剩余输入
-            while (getchar() != '\n')
-                ;
-            printf("输入错误，请输入两个整数。\n");
+            printf("请输入2个数字\n");
+            continue; // 重新输入
         }
+
         if (x >= 1 && x <= row && y >= 1 && y <= col)
         {
-            if (board[x - 1][y - 1] == ' ') // caution
+            if (board[x - 1][y - 1] == ' ')
             {
                 board[x - 1][y - 1] = 'X';
                 break;
             }
             else
             {
-                printf("非法的位置"); //
+                printf("非法的位置\n"); // 位置已被占用
             }
         }
         else
         {
-            printf("非法的位置"); // 非法
+            printf("非法的位置\n"); // 坐标超出范围
         }
     }
 }
+
 void ComputerMove(char board[ROW][COL], int row, int col)
 {
     int x = 0;
