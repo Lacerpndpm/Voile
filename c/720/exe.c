@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <windows.h>
 #include <stdlib.h>
-#include <math.h>
-#include <time.h>
 int main()
 {
     printf("你电脑将在5分钟内关机\n");
