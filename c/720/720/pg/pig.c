@@ -13,7 +13,7 @@ int main()
     while (1)
     {
         printf("你电脑将在5分钟内关机\n");
-        printf("\033[4m正确\033[0m");
+        printf("\033[1;32m正确\033[0m");
         printf("回答此问题以取消\n");
         printf("回答:你是猪吗?Yes/No\n");
         scanf("%s", input);
